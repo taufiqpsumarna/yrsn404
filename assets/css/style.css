@@ -1,0 +1,155 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Landing Container */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 20px;
+}
+
+/* Landing Image */
+.landing-image {
+    width: clamp(150px, 16%, 300px); /* Dynamic width between 150px and 300px */
+    aspect-ratio: 1 / 1; /* Ensures the image maintains a square ratio */
+    border-radius: 10px; /* Smooth corners */
+    margin-bottom: 20px; /* Space below the image */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Adds depth */
+    object-fit: cover; /* Ensures proper image scaling */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.landing-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .landing-image {
+        width: 70%; /* Adjust size for smaller devices */
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .description,
+    .note {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-container {
+        padding: 10px;
+    }
+
+    .landing-image {
+        width: 90%; /* Further adjustments for very small screens */
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+    }
+
+    .description,
+    .note {
+        font-size: 0.8rem;
+    }
+}
+
+/* Overlay Text */
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #cccccc;
+    margin-top: 10px;
+}
+
+.description {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 20px auto;
+    max-width: 600px;
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+.note {
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: italic;
+    color: #999999;
+    margin-top: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #111;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.social-button {
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-button:hover {
+    transform: translateY(-5px);
+    color: #ff4081; /* Default hover color */
+}
+
+.social-button .fa-instagram:hover {
+    color: #E1306C; /* Instagram Pink */
+}
+
+.social-button .fa-spotify:hover {
+    color: #1DB954; /* Spotify Green */
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #777777;
+}
